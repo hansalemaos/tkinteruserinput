@@ -1,8 +1,9 @@
 import os
 import tkinter as tk
 import re
-from tkinter import messagebox
+from tkinter import messagebox, font
 from typing import Optional, Tuple, Union
+
 
 
 def show_warning(title: str, message: str):
@@ -98,6 +99,9 @@ def get_user_input(
 
     user_input = None
     root = tk.Tk()
+    default_font = tk.font.Font(family="Courier New", size=10, weight="normal")
+
+    root.option_add("*Font", default_font)
     if icon:
         root.iconbitmap(os.path.normpath(icon))
     root.geometry(size)
@@ -124,6 +128,8 @@ def get_user_input_checkbox(
 ):
     user_input = []
     root = tk.Tk()
+    default_font = tk.font.Font(family="Courier New", size=10, weight="normal")
+    root.option_add("*Font", default_font)
     if icon:
         root.iconbitmap(os.path.normpath(icon))
     root.geometry(size)
@@ -175,6 +181,8 @@ icon=None,
 ):
     user_input = None
     root = tk.Tk()
+    default_font = tk.font.Font(family="Courier New", size=10, weight="normal")
+    root.option_add("*Font", default_font)
     if icon:
         root.iconbitmap(os.path.normpath(icon))
     root.geometry(size)
@@ -230,6 +238,8 @@ def get_user_input_varbuttons(
         root.destroy()
 
     root = tk.Tk()
+    default_font = tk.font.Font(family="Courier New", size=10, weight="normal")
+    root.option_add("*Font", default_font)
     if icon:
         root.iconbitmap(os.path.normpath(icon))
     root.geometry(size)
